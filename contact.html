@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f1; /* Light black background */
+        }
+
+        header {
+            background-color: #f2f2f1;
+            color: #090909;
+            margin-left: 70px;
+            padding: 20px;
+            font-size: 10px;
+            font-family: monospace;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f2f2f1;
+        }
+
+        nav ul li {
+            float: right;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #090909;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: rgb(23, 83, 239);
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 10px;
+        }
+        h2 {
+            text-align: left;
+            color: rgb(34, 38, 50);
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        h3 {
+            text-align: left;
+            color: #090909;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif
+            margin-left: 20px;
+        }
+
+
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-form h2 {
+            text-align: left;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #111010;
+        }
+
+        .contact-form input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .map-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .text-container {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f2f2f1;
+            color: #090909;
+            font-size: 12px;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #f2f2f1;
+            color: #6d6868cb;
+            padding: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>IT Hiring and Consultation</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="jobapp.html">Job Application</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobsearch.html">Open Positions</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h3>Contact Form</h3>
+        <div class="contact-form">
+            <h2>Exploring Collaboration or Employment Opportunities</h2>
+            <form action="process_form.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+             <!-- Add the data privacy acknowledgment checkbox -->
+             <label>
+                <input type="checkbox" name="privacy_accepted" required>
+                The data will only be used for administrative purposes and will not be passed on to third parties.I accept the data privacy policy.
+            </label>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <!-- New container for the map -->
+    <div class="container map-container">
+        <h3>Locations: Würzburg, Frankfurt: 97080</h3>
+        <h3>Phone: (+49)0178 158 34 53</h3>
+        <!-- You can embed a map or use an iframe with the map source -->
+        <iframe width="50%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5198.66659014781!2d9.932868150422058!3d49.79130471177857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8b2a0bf69805f%3A0x420bf44a95c3f576!2sW%C3%BCrzburg!5e0!3m2!1sen!2sde!4v1568018553030!5m2!1sen!2sde"></iframe>
+    </div>
+<footer>&copy; DeparConsulting</footer>
+
+</body>
+
+</html>

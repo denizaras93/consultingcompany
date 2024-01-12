@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f1; /* Light black background */
+        }
+
+        header {
+            background-color: #f2f2f1;
+            color: #090909;
+            margin-left: 70px;
+            padding: 20px;
+            font-size: 10px;
+            font-family: monospace       
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f2f2f1;
+        }
+
+        nav ul li {
+            float: right;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #090909;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: rgb(23, 83, 239);
+        }
+        .container {
+            width: 75%;
+            margin: auto;
+            padding: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(23, 83, 239);
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        h3 {
+            text-align: left;
+            color: #090909;
+            font-size: 25px;
+            font-family: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-;;
+            margin-left: 20px;
+        }
+
+
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-form h2 {
+            text-align: center;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #141313;
+        }
+
+        .contact-form input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #mainpage-image {
+            width: 75%; /* Maintain the width as 100% for the first image */
+            height: auto; /* Maintains aspect ratio */
+            max-height: 600px; /* Adjust the maximum height as needed */
+            margin: 10px auto;
+            display: block;
+        }
+
+        #second-image,
+        #third-image,
+        #forth-image {
+            width: 75%; /* Maintain the width as 100% for the first image */
+            height: auto; /* Maintains aspect ratio */
+            max-height: 600px; /* Adjust the maximum height as needed */
+            margin: 10px auto;
+            display: block;
+        }
+
+        .text-placeholder {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 80px;
+            font-family: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-;
+            color: rgb(23, 83, 239);
+        }
+
+        .second-text-container p {
+            text-align: center;
+            font-family: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-;
+            font-size: 24px;
+            font-weight: 500;
+            color: #333;
+            line-height: 70px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #f2f2f1;
+            color: #6d6868cb;
+            padding: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align: left;"><samp>IT Hiring and Consultation &nbsp;</samp></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="jobapp.html">Job Application</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobsearch.html">Open Positions</a></li>
+        </ul>
+    </nav>
+
+    <div class="text-placeholder">
+        <p>Transforming IT Solutions</p>
+    </div>
+    <div class="second-text-container">
+      <p>Helping You Thrive</p>
+  </div>
+
+    <p>
+        <img alt="Main Page Image" id="mainpage-image" src="1.png" /> <!-- Replace "mainpage.jpg" with the actual image name and path -->
+        <img alt="Second Image" id="second-image" src="2.png" /> <!-- Replace "YourImage.jpg" with the actual image name and path -->
+        <img alt="Third Image" id="third-image" src="3.png" /> <!-- Replace "YourImage.jpg" with the actual image name and path -->
+        <img alt="Forth Image" id="forth-image" src="4.png" /> <!-- Replace "YourImage.jpg" with the actual image name and path -->
+    </p>
+
+    <div class="container">
+        <h3>Contact Form</h3>
+        <div class="contact-form">
+            <h2></h2>
+            <form action="process_form.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <footer>&copy; DeparConsulting</footer>
+</body>
+
+</html>

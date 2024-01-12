@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f1; /* Light black background */
+        }
+
+        header {
+            background-color: #f2f2f1;
+            color: #090909;
+            margin-left: 70px;
+            padding: 20px;
+            font-size: 10px;
+            font-family: monospace       
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f2f2f1;
+        }
+
+        nav ul li {
+            float: right;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #090909;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: rgb(23, 83, 239);
+        }
+
+        /* Add your CSS styles here */
+        /* For demonstration purposes, the styles are very basic */
+        .job-list {
+            list-style: none;
+            padding: 0;
+            text-align: justify;
+        }
+        .job-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            text-align: justify;
+        }
+        .search-bar {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: rgb(23, 83, 239)
+        }
+        .apply-btn {
+            background-color: rgb(23, 83, 239);
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+        }
+        h3 {
+            text-align: left;
+            color: #090909;
+            font-size: 20px;
+        }
+        footer {
+            text-align: center;
+            background-color: #f2f2f1;
+            color: #6d6868cb;
+            padding: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IT Hiring and Consultation </h1>
+        
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="jobapp.html">Job Application</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobsearch.html">Open Positions</a></li>
+        </ul>
+        
+    </nav>
+
+    <div class="search-bar">
+        <label for="jobSearch">Search for Jobs: </label>
+        <input type="text" id="jobSearch" placeholder="Enter job title or keyword">
+        <button onclick="searchJobs()">Search</button>
+    </div>
+
+    <ul class="job-list" id="jobList">
+        <!-- This is where dynamically fetched job items will be displayed -->
+        <!-- This content can be generated via JavaScript or fetched from a database -->
+        <li class="job-item">
+            <h3>Job Title: IT Technician</h3>
+            <p>Location: Germany – Frankfurt,Berlin,Hameln,Essen,Hamburg, Munchen,Cologne, Dusseldorf, Schkeuditz, Stuttgart </p>
+            <p>Description: IT on-site support
+            Language: German B2 English C1</p>
+            <p>Scope of work: 
+IMAC/R activities. 
+IT on-site support, Installation/ Changes of the new devices (laptop, monitor, docking station) for customer's end-user.
+Remove of the devices and sending the devices via Delivery Company to the Hemmersbach WH.
+Providing documentation of the work in the ticketing system.</p>
+<p>Working Hours: 8:00 AM to 5:00 PM, with a daily total of 8 hours including a 1-hour break. </p>
+            <a href="jobapp.html"><button class="apply-btn">Apply</button></a>
+        </li>
+        <li class="job-item">
+            <h3>Job Title: IT Support 1st 2nd and 3rd Level</h3>
+            <p>Location: On-site</p>
+            <p>Description: Location: Germany – Frankfurt,Berlin,Hameln,Essen,Hamburg, Munchen,Cologne, Dusseldorf, Schkeuditz, Stuttgart</p>
+            <p>Scope of work:Qualifications
+Technical Support and Troubleshooting skills
+Willingness in customer service
+Fluent in German 
+Ability to work independently and manage time effectively
+Knowledge or experience in Computer Science, Information Technology, or related field
+There is no visa sponsorship for this position</p>
+
+<p>Working Hours: 8:00 AM to 5:00 PM, with a daily total of 8 hours including a 1-hour break.
+
+</p>
+            <a href="jobapp.html"><button class="apply-btn">Apply</button></a>
+        </li>
+        <!-- Add more job items as needed -->
+    </ul>
+
+    <script>
+        function searchJobs() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('jobSearch');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById('jobList');
+            li = ul.getElementsByTagName('li');
+
+            for (i = 0; i < li.length; i++) {
+                a = li[i];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = '';
+                } else {
+                    li[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+    <footer>&copy; DeparConsulting</footer>
+</body>
+</html>

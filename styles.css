@@ -1,0 +1,18 @@
+h1 {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+div {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+p {
+    background-color: yellow;
+    padding: 10px;
+}

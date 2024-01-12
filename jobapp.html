@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Application Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f1; /* Light black background */
+        }
+
+        header {
+            background-color: #f2f2f1;
+            color: #090909;
+            margin-left: 70px;
+            padding: 20px;
+            font-size: 10px;
+            font-family: monospace
+        }
+
+        header h1 {
+            text-align: left;
+            color: #000; /* Black color for the header */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f2f2f1;
+        }
+
+        nav ul li {
+            float: right;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: rgb(23, 83, 239);
+        }
+
+        .main-content { /* About section starting part */
+            padding: 20px;
+            background-color: #f2f2f1;
+            color: #090909;
+            font-family: hehelvetica-w01-roman, helvetica-w02-roman,;
+            font-size: 16;
+            line-height: 24px;
+            font-weight: 400;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .text-container {
+            width: 30%; /* Adjust the width as needed */
+            text-align: justify;
+            margin-left: 70px;
+        }
+
+        #mainpage-image {
+            width: 100%; /* Maintain the width as 100% for the first image */
+            height: auto; /* Maintains aspect ratio */
+        }
+        #forth-image {
+            width: 75%; /* Maintain the width as 100% for the first image */
+            height: auto; /* Maintains aspect ratio */
+            max-height: 600px; /* Adjust the maximum height as needed */
+            margin: 10px auto;
+            display: block;
+        }
+        
+        h2 {
+            text-align: center;
+            color: rgb(23, 83, 239);
+            font-size: 25px;
+            font-family: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-;
+            letter-spacing: normal;
+            line-height: 100px;
+        }
+
+        form {
+            width: 80%; /* Adjust the width as needed, in this case, 80% of the viewport width */
+            margin: 0 auto;
+            background-color: #e4dcd3;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #111111;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(23, 83, 239);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0ea6ed;
+        }
+        footer {
+            text-align: center;
+            background-color: #f2f2f1;
+            color: #6d6868cb;
+            padding: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>IT Hiring and Consultation</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="jobapp.html">Job Application</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobsearch.html">Open Positions</a></li>
+        </ul>
+    </nav>
+
+    <h2>Submit an Application Form</h2>
+
+    <div class="main-content">
+        <form action="submit_application.php" enctype="multipart/form-data" method="post">
+            <label for="full_name">Full Name:</label>
+            <input id="full_name" name="full_name" required="" type="text" />
+
+            <label for="email">Email:</label>
+            <input id="email" name="email" required="" type="email" />
+
+            <label for="phone">Phone:</label>
+            <input id="phone" name="phone" required="" type="text" />
+
+            <label for="highest_education">Highest Education:</label>
+            <input id="highest_education" name="highest_education" type="text" />
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required="" rows="4"></textarea>
+
+            <label for="resume">Upload Resume:</label>
+            <input id="resume" name="resume" required="" type="file" />
+
+            <label for="message">Additional Information:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <input type="submit" value="Submit Application" />
+        </form>
+    </div>
+</div>
+
+<p>
+    
+    <img alt="Forth Image" id="forth-image" src="4.png" /> <!-- Replace "YourImage.jpg" with the actual image name and path -->
+</p>
+<footer>&copy; DeparConsulting</footer>
+</body>
+
+
+</html>
